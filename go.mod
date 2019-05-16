@@ -4,7 +4,7 @@ require (
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/ghodss/yaml v1.0.0
 	github.com/gin-contrib/sse v0.0.0-20190301062529-5545eab6dad3 // indirect
-	github.com/gin-gonic/gin v1.3.0
+	github.com/gin-gonic/gin v1.4.0
 	github.com/go-openapi/jsonpointer v0.18.0 // indirect
 	github.com/go-openapi/jsonreference v0.18.0
 	github.com/go-openapi/spec v0.18.0
@@ -29,3 +29,5 @@ require (
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 )
+
+replace github.com/swaggo/gin-swagger => github.com/jixiuf/gin-swagger v1.1.6
