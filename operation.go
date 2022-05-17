@@ -25,7 +25,7 @@ type RouteProperties struct {
 }
 
 // Operation describes a single API operation on a path.
-// For more information: https://github.com/swaggo/swag#api-operation
+// For more information: https://github.com/jixiuf/swag#api-operation
 type Operation struct {
 	parser              *Parser
 	codeExampleFilesDir string
@@ -269,7 +269,7 @@ func (operation *Operation) parseArrayParam(param *spec.Parameter, paramType, re
 }
 
 // ParseParamComment parses params return []string of param properties
-// E.g. @Param	queryText		formData	      string	  true		        "The email for login"
+// E.g. @Param	queryText		formData		  string	  true				"The email for login"
 //              [param name]    [paramType] [data type]  [is mandatory?]   [Comment]
 // E.g. @Param   some_id     path    int     true        "Some ID".
 func (operation *Operation) ParseParamComment(commentLine string, astFile *ast.File) error {
@@ -1152,7 +1152,7 @@ func (operation *Operation) AddResponse(code int, response *spec.Response) {
 
 // createParameter returns swagger spec.Parameter for given  paramType, description, paramName, schemaType, required.
 func createParameter(paramType, description, paramName, schemaType string, required bool) spec.Parameter {
-	// //five possible parameter types. 	query, path, body, header, form
+	// //five possible parameter types.		query, path, body, header, form
 	result := spec.Parameter{
 		ParamProps: spec.ParamProps{
 			Name:            paramName,
