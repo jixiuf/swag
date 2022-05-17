@@ -48,7 +48,7 @@
                     "type": "string",
                     "x-go-type": {
                         "import": {
-                            "package": "github.com/swaggo/swag/testdata/global_override/types"
+                            "package": "github.com/jixiuf/swag/testdata/global_override/types"
                         },
                         "type": "Application"
                     }
@@ -62,7 +62,7 @@
                         "type": "string",
                         "x-go-type": {
                             "import": {
-                                "package": "github.com/swaggo/swag/testdata/global_override/types"
+                                "package": "github.com/jixiuf/swag/testdata/global_override/types"
                             },
                             "type": "Application"
                         }
