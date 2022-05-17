@@ -17,7 +17,7 @@ import (
 
 	"github.com/ghodss/yaml"
 	"github.com/go-openapi/spec"
-	"github.com/swaggo/swag"
+	"github.com/jixiuf/swag"
 )
 
 var open = os.Open

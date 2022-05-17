@@ -2144,9 +2144,9 @@ func TestParseTypeOverrides(t *testing.T) {
 
 	searchDir := "testdata/global_override"
 	p := New(SetOverrides(map[string]string{
-		"github.com/swaggo/swag/testdata/global_override/types.Application":  "string",
-		"github.com/swaggo/swag/testdata/global_override/types.Application2": "github.com/swaggo/swag/testdata/global_override/othertypes.Application",
-		"github.com/swaggo/swag/testdata/global_override/types.ShouldSkip":   "",
+		"github.com/jixiuf/swag/testdata/global_override/types.Application":  "string",
+		"github.com/jixiuf/swag/testdata/global_override/types.Application2": "github.com/jixiuf/swag/testdata/global_override/othertypes.Application",
+		"github.com/jixiuf/swag/testdata/global_override/types.ShouldSkip":   "",
 	}))
 	err := p.ParseAPI(searchDir, mainAPIFile, defaultParseDepth)
 	assert.NoError(t, err)
@@ -2923,30 +2923,30 @@ func Test3(){
 }
 
 // func TestParseDeterministic(t *testing.T) {
-// 	mainAPIFile := "main.go"
-// 	for _, searchDir := range []string{
-// 		"testdata/simple",
-// 		"testdata/model_not_under_root/cmd",
-// 	} {
-// 		t.Run(searchDir, func(t *testing.T) {
-// 			var expected string
+//	mainAPIFile := "main.go"
+//	for _, searchDir := range []string{
+//		"testdata/simple",
+//		"testdata/model_not_under_root/cmd",
+//	} {
+//		t.Run(searchDir, func(t *testing.T) {
+//			var expected string
 
-// 			// run the same code 100 times and check that the output is the same every time
-// 			for i := 0; i < 100; i++ {
-// 				p := New()
-// 				p.PropNamingStrategy = PascalCase
-// 				err := p.ParseAPI(searchDir, mainAPIFile, defaultParseDepth)
-// 				b, _ := json.MarshalIndent(p.swagger, "", "    ")
-// 				assert.NotEqual(t, "", string(b))
+//			// run the same code 100 times and check that the output is the same every time
+//			for i := 0; i < 100; i++ {
+//				p := New()
+//				p.PropNamingStrategy = PascalCase
+//				err := p.ParseAPI(searchDir, mainAPIFile, defaultParseDepth)
+//				b, _ := json.MarshalIndent(p.swagger, "", "    ")
+//				assert.NotEqual(t, "", string(b))
 
-// 				if expected == "" {
-// 					expected = string(b)
-// 				}
+//				if expected == "" {
+//					expected = string(b)
+//				}
 
-// 				assert.Equal(t, expected, string(b))
-// 			}
-// 		})
-// 	}
+//				assert.Equal(t, expected, string(b))
+//			}
+//		})
+//	}
 // }
 
 func TestParser_ParseRouterApiDuplicateRoute(t *testing.T) {
