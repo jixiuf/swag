@@ -4,14 +4,14 @@
 
 <img align="right" width="180px" src="https://raw.githubusercontent.com/swaggo/swag/master/assets/swaggo.png">
 
-[![Build Status](https://github.com/swaggo/swag/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/features/actions)
+[![Build Status](https://github.com/jixiuf/swag/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/features/actions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/swaggo/swag/master.svg)](https://codecov.io/gh/swaggo/swag)
-[![Go Report Card](https://goreportcard.com/badge/github.com/swaggo/swag)](https://goreportcard.com/report/github.com/swaggo/swag)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jixiuf/swag)](https://goreportcard.com/report/github.com/jixiuf/swag)
 [![codebeat badge](https://codebeat.co/badges/71e2f5e5-9e6b-405d-baf9-7cc8b5037330)](https://codebeat.co/projects/github-com-swaggo-swag-master)
-[![Go Doc](https://godoc.org/github.com/swaggo/swagg?status.svg)](https://godoc.org/github.com/swaggo/swag)
+[![Go Doc](https://godoc.org/github.com/jixiuf/swagg?status.svg)](https://godoc.org/github.com/jixiuf/swag)
 [![Backers on Open Collective](https://opencollective.com/swag/backers/badge.svg)](#backers)
 [![Sponsors on Open Collective](https://opencollective.com/swag/sponsors/badge.svg)](#sponsors) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fswaggo%2Fswag.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fswaggo%2Fswag?ref=badge_shield)
-[![Release](https://img.shields.io/github/release/swaggo/swag.svg?style=flat-square)](https://github.com/swaggo/swag/releases)
+[![Release](https://img.shields.io/github/release/swaggo/swag.svg?style=flat-square)](https://github.com/jixiuf/swag/releases)
 
 
 Swag converts Go annotations to Swagger Documentation 2.0. We've created a variety of plugins for popular [Go web frameworks](#supported-web-frameworks). This allows you to quickly integrate with an existing Go project (using Swagger UI).
@@ -149,7 +149,7 @@ OPTIONS:
 
 ## How to use it with Gin
 
-Find the example source code [here](https://github.com/swaggo/swag/tree/master/example/celler).
+Find the example source code [here](https://github.com/jixiuf/swag/tree/master/example/celler).
 
 Finish the steps in [Getting started](#getting-started)
 1. After using `swag init` to generate Swagger 2.0 docs, import the following packages:
@@ -253,8 +253,8 @@ import (
     "strconv"
 
     "github.com/gin-gonic/gin"
-    "github.com/swaggo/swag/example/celler/httputil"
-    "github.com/swaggo/swag/example/celler/model"
+    "github.com/jixiuf/swag/example/celler/httputil"
+    "github.com/jixiuf/swag/example/celler/model"
 )
 
 // ShowAccount godoc
@@ -319,7 +319,7 @@ swag init
 ## The swag formatter
 
 The Swag Comments can be automatically formatted, just like 'go fmt'.
-Find the result of formatting [here](https://github.com/swaggo/swag/tree/master/example/celler).
+Find the result of formatting [here](https://github.com/jixiuf/swag/tree/master/example/celler).
 
 Usage:
 ```shell
@@ -378,7 +378,7 @@ func (c *Controller) ListAccounts(ctx *gin.Context) {
 ## General API Info
 
 **Example**
-[celler/main.go](https://github.com/swaggo/swag/blob/master/example/celler/main.go)
+[celler/main.go](https://github.com/jixiuf/swag/blob/master/example/celler/main.go)
 
 | annotation  | description                                | example                         |
 |-------------|--------------------------------------------|---------------------------------|
@@ -421,7 +421,7 @@ When a short string in your documentation is insufficient, or you need images, c
 ## API Operation
 
 **Example**
-[celler/controller](https://github.com/swaggo/swag/tree/master/example/celler/controller)
+[celler/controller](https://github.com/jixiuf/swag/tree/master/example/celler/controller)
 
 
 | annotation  | description                                                                                                                |
@@ -704,7 +704,7 @@ type Account struct {
 }
 ```
 
-[#708](https://github.com/swaggo/swag/issues/708) The parser handles only struct comments starting with `@Description` attribute.
+[#708](https://github.com/jixiuf/swag/issues/708) The parser handles only struct comments starting with `@Description` attribute.
 But it writes all struct field comments as is.
 
 So, generated swagger doc as follows:
@@ -726,7 +726,7 @@ So, generated swagger doc as follows:
 ```
 
 ### Use swaggertype tag to supported custom type
-[#201](https://github.com/swaggo/swag/issues/201#issuecomment-475479409)
+[#201](https://github.com/jixiuf/swag/issues/201#issuecomment-475479409)
 
 ```go
 type TimestampTime struct {
@@ -762,7 +762,7 @@ type Account struct {
 }
 ```
 
-[#379](https://github.com/swaggo/swag/issues/379)
+[#379](https://github.com/jixiuf/swag/issues/379)
 ```go
 type CerticateKeyPair struct {
 	Crt []byte `json:"crt" swaggertype:"string" format:"base64" example:"U3dhZ2dlciByb2Nrcw=="`
@@ -949,7 +949,7 @@ This project was inspired by [yvasiyarov/swagger](https://github.com/yvasiyarov/
 ## Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/swaggo/swag/graphs/contributors"><img src="https://opencollective.com/swag/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/jixiuf/swag/graphs/contributors"><img src="https://opencollective.com/swag/contributors.svg?width=890&button=false" /></a>
 
 
 ## Backers

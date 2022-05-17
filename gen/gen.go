@@ -16,7 +16,7 @@ import (
 	"time"
 
 	"github.com/go-openapi/spec"
-	"github.com/swaggo/swag"
+	"github.com/jixiuf/swag"
 	"sigs.k8s.io/yaml"
 )
 
