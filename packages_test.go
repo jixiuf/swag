@@ -27,7 +27,7 @@ func TestPackagesDefinitions_collectAstFile(t *testing.T) {
 		Name: &ast.Ident{Name: "main.go"},
 	}
 
-	packageDir := "github.com/swaggo/swag/testdata/simple"
+	packageDir := "github.com/jixiuf/swag/testdata/simple"
 	assert.NoError(t, pd.collectAstFile(fileSet, packageDir, "testdata/simple/"+firstFile.Name.String(), firstFile, ParseAll))
 	assert.NotEmpty(t, pd.packages[packageDir])
 
