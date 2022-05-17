@@ -1,4 +1,4 @@
-module github.com/swaggo/swag
+module github.com/jixiuf/swag
 
 go 1.23.0
 
