@@ -456,6 +456,8 @@ func getIntTag(structTag reflect.StructTag, tagName string) (*int64, error) {
 	return &value, nil
 }
 
+var DefaultRequired = false //web-adapter 里面的swagger 是被前端拉取，去自动生成代码的。@利力
+
 func (ps *tagBaseFieldParser) IsRequired() (bool, error) {
 	if ps.field.Tag == nil {
 		return false, nil
@@ -466,8 +468,13 @@ func (ps *tagBaseFieldParser) IsRequired() (bool, error) {
 		for _, val := range strings.Split(bindingTag, ",") {
 			if val == requiredLabel {
 				return true, nil
+			} else if val == "opt" || val == "optional" { // add by jixiufeng
+				return false, nil
+
 			}
 		}
+	} else if DefaultRequired {
+		return true, nil // default all field required
 	}
 
 	validateTag := ps.tag.Get(validateTag)
